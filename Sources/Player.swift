@@ -308,7 +308,7 @@ open class Player: UIViewController {
     }
 
     /// self.view as PlayerView type
-    public var playerView: PlayerView {
+    public var playerView: VideoPlayerView {
         get {
             return self._playerView
         }
@@ -359,7 +359,7 @@ open class Player: UIViewController {
     internal var _playerLayerObserver: NSKeyValueObservation?
     internal var _playerTimeObserver: Any?
 
-    internal var _playerView: PlayerView = PlayerView(frame: .zero)
+    internal var _playerView: VideoPlayerView = VideoPlayerView(frame: .zero)
     internal var _seekTimeRequested: CMTime?
     internal var _lastBufferTime: Double = 0
     internal var _preferredMaximumResolution: CGSize = .zero
@@ -925,7 +925,7 @@ extension Player {
 
 // MARK: - PlayerView
 
-public class PlayerView: UIView {
+public class VideoPlayerView: UIView {
 
     // MARK: - overrides
 
